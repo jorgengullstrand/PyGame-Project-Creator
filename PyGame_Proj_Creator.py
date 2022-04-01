@@ -27,10 +27,10 @@ if not os.path.exists(filename):
             file.write("while running:\n")                                      # Main game loop
             file.write("    for event in pygame.event.get():\n")
             file.write("        if event.type == pygame.QUIT:\n")               # Checks if quit event triggered
-            file.write("            running = False\n")                         
-            file.write("    display.update()")                                  # Updates the display
+            file.write("            running = False\n")                         # Nope running shouldn't be True    
             file.close()
             
         # Writes the batch file to run the game
         with open(batch_file, "w") as file:
             file.write("python code/main.py")                                   # sets the path to main.py for the batch
+            
