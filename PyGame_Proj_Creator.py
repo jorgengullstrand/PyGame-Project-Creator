@@ -16,20 +16,21 @@ if not os.path.exists(filename):
 
         # Writes everything to main.py
         with open(main_file, 'w') as file:
-            file.write("import pygame\n")
-            file.write("background_colour = (255,255,255)\n")
-            file.write("(width, height) = (1280, 720)\n")
-            file.write("screen = pygame.display.set_mode((width, height))\n")
-            file.write("pygame.display.set_caption('" + filename + "')\n")
-            file.write("screen.fill(background_colour)\n")
-            file.write("pygame.display.flip()\n")
-            file.write("running = True\n")
-            file.write("while running:\n")
+            file.write("import pygame\n")                                       # yup imports pygame
+            file.write("background_colour = (255,255,255)\n")                   # Defines the background color
+            file.write("(width, height) = (1280, 720)\n")                       # defines the resolution
+            file.write("screen = pygame.display.set_mode((width, height))\n")   # Sets the resolution
+            file.write("pygame.display.set_caption('" + filename + "')\n")      # Sets window name
+            file.write("screen.fill(background_colour)\n")                      # Sets the background color 
+            file.write("pygame.display.flip()\n")           
+            file.write("running = True\n")  
+            file.write("while running:\n")                                      # Main game loop
             file.write("    for event in pygame.event.get():\n")
-            file.write("        if event.type == pygame.QUIT:\n")
-            file.write("            running = False\n")
+            file.write("        if event.type == pygame.QUIT:\n")               # Checks if quit event triggered
+            file.write("            running = False\n")                         
+            file.write("    display.update()")                                  # Updates the display
             file.close()
             
         # Writes the batch file to run the game
         with open(batch_file, "w") as file:
-            file.write("python code/main.py")
+            file.write("python code/main.py")                                   # sets the path to main.py for the batch
