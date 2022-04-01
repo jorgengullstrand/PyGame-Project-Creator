@@ -17,11 +17,11 @@ if not os.path.exists(filename):
         # Writes everything to main.py
         with open(main_file, 'w') as file:
             file.write("import pygame\n")                                       # yup imports pygame
-            file.write("background_colour = (255,255,255)\n")                   # Defines the background color
+            file.write("background_color = (255,255,255)\n")                    # Defines the background color
             file.write("(width, height) = (1280, 720)\n")                       # defines the resolution
             file.write("screen = pygame.display.set_mode((width, height))\n")   # Sets the resolution
             file.write("pygame.display.set_caption('" + filename + "')\n")      # Sets window name
-            file.write("screen.fill(background_colour)\n")                      # Sets the background color 
+            file.write("screen.fill(background_color)\n")                       # Sets the background color 
             file.write("pygame.display.flip()\n")           
             file.write("running = True\n")  
             file.write("while running:\n")                                      # Main game loop
